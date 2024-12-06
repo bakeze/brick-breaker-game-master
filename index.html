@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="./style.css">
+    <title>Niveau 1</title>
+</head>
+<body>
+    <h1 class="heading">Niveau 1</h1>
+    <button id="rules-btn" class="btn rules-btn">Afficher les Règles</button>
+    <div id="rules" class="rules">
+        <h2>Comment Jouer :</h2>
+        <p> Utilisez les touches droite et gauche pour déplacer la raquette, faire rebondir la balle et briser les blocs.</p> 
+        <p> Si vous manquez la balle, votre score et les blocs seront réinitialisés.</p>
+        <button id="close-btn" class="btn">Fermer</button>
+    </div>
+    <div class="game-wrapper">
+        <div class="main">
+            
+        </div>
+            <div id="start" class="start">
+                <button class="start-btn" onclick="startGame()">Commencer le jeu</button>
+            </div>
+            <div id="difficulty" class="difficulty">
+                <p>Choisisser le niveau de difficulté</p>
+                <button class="diff-btn" onclick="easyMode()">Facile</button>
+                <button class="diff-btn" onclick="mediumMode()">Interemédiarie</button>
+                <button class="diff-btn" onclick="hardMode()">Difficile</button>
+            </div>
+            <div class="lose">
+                <h2>Perdu</h2>
+                <h3>Bonne chance pour la prochaine fois!</h3>
+                <button class="btn" onclick="window.location.reload()">Recommencer</button>
+            </div>
+            <div class="win">
+                <h2>Vous avez gagné!</h2>
+                <h3>Bravo Bravo!</h3>
+                <button class="btn" onclick="window.location.reload()">Recommencer</button>
+            </div>
+    </div>
+    <canvas id="canvas" width="750" height="520" >
+    </canvas>
+    <img src="https://i.gifer.com/WlSu.gif" alt="Background Image" style="
+    position: absolute; 
+    bottom: 0; 
+    top: 85%;
+    left: 20.1%; 
+    width: 59.7%; 
+    height: 29.7%; 
+    opacity: 0.6; 
+    pointer-events: none;
+    object-fit: cover; 
+    object-position: 0 -50px;
+    border-radius:7px"
+   > <!-- Décale la partie visible de l'image -->
+
+    
+    <script src="./index.js"></script>
+</body>
+</html>
